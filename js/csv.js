@@ -49,6 +49,7 @@ function analizar(){
     }
     html_text.unshift('<table class="table table-bordered">');
     html_text.push('</table>');
+    $("#table_string").css("display" , "block");
     document.getElementById("tabla").innerHTML = html_text.join('\n');
 };
 

@@ -42,17 +42,20 @@
                 </div>
             </nav>
         </div>
+        <div>
+            <h3>Write a CSV string in text field and click 'Analyze'. The program outputs a table with the specified data.</h3>
+        </div>
         <div class="jumbotron">
             <table>
-                <thead class="thead">
-                    <td>CSV Text</td>
-                    <td>Table</td>
+                <thead class="thead" style="text-align:center;">
+                    <td><b><p>CSV Text</p></b></td>
+                    <td id="table_string" style="display:none;"><b><p>Table</p></b></td>
                 </thead>
                 <tbody>
                     <tr>
                         <td>
                             <textarea rows="6" cols="80" autofocus="" id="csv_text"></textarea>
-                            <p></p><button class="btn btn-danger" id="analizar">Analizar</button>
+                            <p></p><button class="btn btn-danger" id="analizar">Analyze</button>
                         </td>
                         <td style="padding-left: 10px;">
                             <!--Aqui va la tabla que se genera-->
