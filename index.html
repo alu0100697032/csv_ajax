@@ -44,16 +44,22 @@
         </div>
         <div class="jumbotron">
             <table>
-                <tr>
-                    <td>
-                        <textarea rows="6" cols="80" autofocus="" id="csv_text"></textarea>
-                        <p></p><button class="btn btn-danger" id="analizar">Analizar</button>
-                    </td>
-                    <td style="padding-left: 10px;">
-                        <!--Aqui va la tabla que se genera-->
-                        <span id="tabla"></span>
-                    </td>
-                </tr>
+                <thead class="thead">
+                    <td>CSV Text</td>
+                    <td>Table</td>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <textarea rows="6" cols="80" autofocus="" id="csv_text"></textarea>
+                            <p></p><button class="btn btn-danger" id="analizar">Analizar</button>
+                        </td>
+                        <td style="padding-left: 10px;">
+                            <!--Aqui va la tabla que se genera-->
+                            <span id="tabla"></span>
+                        </td>
+                    </tr>
+                </tbody>
             </table>
         </div>
     </div>

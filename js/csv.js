@@ -15,6 +15,7 @@ function analizar(){
     var regexp = /\s*"((?:[^"\\]|\\.)*)"\s*,?|\s*([^,]+),?|\s*,/g;
     var lines = csv_text.split(/\n+\s*/);
     var html_text = [];
+    var commonLength = NaN;
     //underscore
     var row = "<% _.each(item, function(cell){%>"+ 
               "<td><%=cell%></td>"+    
@@ -23,7 +24,15 @@ function analizar(){
     for (var i in lines){
         var matching = lines[i].match(regexp);
         var t_row = []; //treated row
+        var error = false;
         if(matching){
+            if (commonLength && (commonLength != matching.length)) {
+                error = true;
+            }
+            else {
+                commonLength = matching.length;
+                error = false;
+            }
             for(var j in matching){
                 var value = matching[j].replace(/,\s*$/,''); //remove comma
                 value = value.replace(/^\s*"/,''); //remote first quote
@@ -32,7 +41,8 @@ function analizar(){
                 t_row.push(value);
             }
             //underscore
-            html_text.push('<tr>' + _.template(row, {item : t_row}) + '</tr>');
+            var tr_type = error? '<tr style="background-color:red;">': '<tr>';
+            html_text.push(tr_type + _.template(row, {item : t_row}) + '</tr>');
         }else{
             alert("Invalid CSV format!");
         }
