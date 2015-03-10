@@ -10,12 +10,19 @@ module.exports = function(config) {
 
     // frameworks to use
     // available frameworks: https://npmjs.org/browse/keyword/karma-adapter
-    frameworks: ['mocha'],
-
+    frameworks: ['mocha', 'chai'],
+  
+    client: {
+          mocha: {
+            ui: 'tdd'
+          }
+    },
 
     // list of files / patterns to load in the browser
     files: [
-      'js/*.js',
+      'js/jquery-2.1.3.min.js',
+      'js/csv.js',
+      'js/underscore-min.js',
       'tests/*.js',
       'tests/index.html',
       'index.html'
@@ -24,6 +31,7 @@ module.exports = function(config) {
 
     // list of files to exclude
     exclude: [
+      'gulpfile.js',
     ],
 
 
