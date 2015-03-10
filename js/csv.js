@@ -3,6 +3,9 @@ $(document).ready(function() {
     $("#analizar").click(function() {
         analizar();
     });
+    if (window.localStorage && localStorage.csv_text) {
+        $("#csv_text").val(localStorage.csv_text);
+    }
 });
 
 function analizar(){
@@ -51,11 +54,4 @@ function analizar(){
     html_text.push('</table>');
     $("#table_string").css("display" , "block");
     document.getElementById("tabla").innerHTML = html_text.join('\n');
-};
-
-//check localStorage
-window.onload = function() {
-    if (window.localStorage && localStorage.csv_text) {
-        document.getElementById("csv_text").value = localStorage.csv_text;
-    }
 };
