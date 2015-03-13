@@ -6,7 +6,7 @@ app.use(express.static('public'));
 app.set('port', (process.env.PORT || 5000));
 
 // view engine setup
-app.set('views', path.join(__dirname, 'views'));
+//app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
 app.get('/', function (req, res) {
