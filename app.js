@@ -16,6 +16,11 @@ app.get('/', function (req, res) {
   res.render('index', { title: 'CSV' });
 })
 
+app.get('/js/bootstrap.min.js', function (req, res) {
+    var fileName = req.params.name;
+    res.sendFile(fileName);
+})
+
 app.listen(app.get('port'), function() {
 console.log("Node app is running at localhost:" + app.get('port'));
 });
