@@ -11,13 +11,14 @@ app.set('view engine', 'ejs');
 
 app.use(expressLayouts);
 app.use(express.static(__dirname + '/public'));
+app.use(express.static(__dirname + '/tests'));
 
 app.get('/', function (req, res) {
   res.render('index', { title: 'CSV' });
 })
 
 app.get('/tests', function (req, res) {
-  res.sendFile('/tests/index.html');
+  res.redirect('/tests/index.html');
 });
 
 app.listen(app.get('port'), function() {
