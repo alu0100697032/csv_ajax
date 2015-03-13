@@ -17,7 +17,7 @@ app.get('/', function (req, res) {
 })
 
 app.get('/tests', function (req, res) {
-  res.redirect('/tests/index.html');
+  res.send('/tests/index.html');
 });
 
 app.listen(app.get('port'), function() {
