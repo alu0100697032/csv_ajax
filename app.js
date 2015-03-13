@@ -16,17 +16,10 @@ app.get('/', function (req, res) {
   res.render('index', { title: 'CSV' });
 })
 
+app.get('/tests', function (req, res) {
+  res.location('/tests/index.html');
+});
+
 app.listen(app.get('port'), function() {
     console.log("Node app is running at localhost:" + app.get('port'));
 });
-/*app.get('/chuchu', function (req, res) {
-  var isAjaxRequest = req.xhr;
-  console.log(isAjaxRequest);
-  if (isAjaxRequest) {
-    console.log(req.query);
-    res.send('{"answer": "Server responds: hello world!"}')
-  }
-  else {
-    res.send('not an ajax request');
-  }
-});*/
