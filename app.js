@@ -17,11 +17,11 @@ app.get('/', function (req, res) {
 })
 
 app.get('/js/bootstrap.min.js', function (req, res) {
-    console.log('cawen');
+    res.sendFile('/js/bootstrap.min.js');
 })
 
 app.listen(app.get('port'), function() {
-console.log("Node app is running at localhost:" + app.get('port'));
+    console.log("Node app is running at localhost:" + app.get('port'));
 });
 /*app.get('/chuchu', function (req, res) {
   var isAjaxRequest = req.xhr;
