@@ -30,12 +30,3 @@ console.log("Node app is running at localhost:" + app.get('port'));
     res.send('not an ajax request');
   }
 });*/
-/*
-var server = app.listen(3000, function () {
-
-  var host = server.address().address
-  var port = server.address().port
-
-  console.log('Example app listening at http://%s:%s', host, port)
-
-});*/
