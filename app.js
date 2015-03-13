@@ -17,8 +17,7 @@ app.get('/', function (req, res) {
 })
 
 app.get('/js/bootstrap.min.js', function (req, res) {
-    var fileName = req.params.name;
-    res.sendFile(fileName);
+    console.log('cawen');
 })
 
 app.listen(app.get('port'), function() {
