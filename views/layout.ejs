@@ -11,6 +11,18 @@
     <script type="text/javascript" src="/underscore-min.js"></script>
     <script type="text/javascript" src="/jquery-2.1.3.min.js"></script>
     <script type="text/javascript" src="/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#analizar").click(function(){
+                $.getJSON("csv.js", function(result){
+                    $.each(result, function(i, field){
+                        $("#tabla").append(field + " ");
+                    });
+                });
+            });
+        });
+    </script>
+    
 </head>
 
 <body>
