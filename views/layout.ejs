@@ -14,6 +14,7 @@
     <script>
         $(document).ready(function(){
             $("#analizar").click(function(){
+                event.preventDefault();
                 console.log("pastel");
                 $.getJSON("csv.js", function(result){
                     console.log("pastel");
