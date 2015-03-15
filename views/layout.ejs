@@ -15,6 +15,7 @@
         $(document).ready(function(){
             $("#analizar").click(function(){
                 $.getJSON("csv.js", function(result){
+                    console.log("pastel");
                     $.each(result, function(i, field){
                         $("#tabla").append(field + "Hola");
                     });
