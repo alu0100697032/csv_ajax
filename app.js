@@ -25,13 +25,6 @@ app.get('/tests', function (req, res) {
 app.get('csv.js', function(req, res) {
     var isAjaxRequest = req.xhr;
     console.log(isAjaxRequest);
-      if (isAjaxRequest) {
-        console.log(req.query);
-        res.send('ajax request')
-      }
-      else {
-        res.send('not an ajax request');
-      }
 });
 
 app.listen(app.get('port'), function() {
