@@ -7,12 +7,8 @@ $(document).ready(function() {
 });
 
 function analizar(){
-    var string = [];
-    string.push("Array");
-    string.push("to");
-    string.push("JSON");
-    var json = JSON.stringify(string);
-    return json;
+    var string = "Algo";
+    return string;
     
     /*
     var csv_text = document.getElementById("csv_text").value;

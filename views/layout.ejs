@@ -15,8 +15,8 @@
         $(document).ready(function(){
             $("#analizar").click(function(event){
                 event.preventDefault();
-                $.get("csv.js", function(json){
-                    $("#tabla").html(json);
+                $.get("csv.js", function(string){
+                    $("#tabla").text(string);
                 });
             });
         });
