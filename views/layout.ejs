@@ -15,12 +15,8 @@
         $(document).ready(function(){
             $("#analizar").click(function(event){
                 event.preventDefault();
-                console.log("pastel");
-                $.getJSON("csv.js", function(result){
-                    console.log("pastel");
-                    $.each(result, function(i, field){
-                        $("#tabla").append(field + "Hola");
-                    });
+                $.get("csv.js", function(result){
+                    console.log("pastel2");
                 });
             });
         });
