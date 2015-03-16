@@ -15,7 +15,11 @@
         $(document).ready(function(){
             $("#analizar").click(function(event){
                 event.preventDefault();
-                $.getScript("csv.js");
+                $.getJSON("csv.js", function(result){
+                    $.each(result, function(i, field){
+                        $("#tabla").append(field + " ");
+                    });
+                });
             });
         });
     </script>
