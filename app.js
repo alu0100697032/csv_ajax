@@ -22,7 +22,7 @@ app.get('/tests', function (req, res) {
   res.render('tests', { title: 'CSV Test' });
 });
 
-app.get('csv.js', function (req, res) {
+app.get('/csv', function (req, res) {
     var isAjaxRequest = req.xhr;
     console.log(isAjaxRequest);
     if (isAjaxRequest) {
