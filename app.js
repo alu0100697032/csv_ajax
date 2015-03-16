@@ -37,3 +37,13 @@ app.get('/csv', function (req, res) {
 app.listen(app.get('port'), function() {
     console.log("Node app is running at localhost:" + app.get('port'));
 });
+
+function analizar(){
+    
+    var string = [];
+    string.push("Array");
+    string.push("toJSON");
+    var json = JSON.stringify(string);
+    console.log(json);
+    return json;
+}
