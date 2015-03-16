@@ -29,7 +29,7 @@ app.get('/csv', function (req, res) {
         console.log(req.query);
         var json = analizar();
         console.log(json);
-        res.send(json);
+        res.send('{"answer": "Server responds: hello world!"}');
     }
     else {
         res.send('not an ajax request');
