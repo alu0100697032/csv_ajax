@@ -41,8 +41,6 @@ app.listen(app.get('port'), function() {
 function analizar(){
     
     var string = [];
-    string.push("Array");
-    string.push("toJSON");
-    console.log(string);
+    string.push('{"answer": "Server responds: hello world!"}');
     return string;
 }
