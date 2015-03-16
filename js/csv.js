@@ -3,6 +3,7 @@ $(document).ready(function() {
     if (window.localStorage && localStorage.csv_text) {
         $("#csv_text").val(localStorage.csv_text);
     }
+    console.log("antes de analizar");
     analizar();
 });
 
