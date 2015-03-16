@@ -8,6 +8,7 @@ $(document).ready(function() {
 
 function analizar(){
     var string = "Algo";
+    console.log("Ejecutando analizar");
     return string;
     
     /*
