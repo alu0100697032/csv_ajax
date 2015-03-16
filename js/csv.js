@@ -7,11 +7,7 @@ $(document).ready(function() {
 });
 
 function analizar(){
-    var string = "Algo";
-    console.log("Ejecutando analizar");
-    return string;
-    
-    /*
+
     var csv_text = document.getElementById("csv_text").value;
     
     //local storage 
@@ -19,7 +15,7 @@ function analizar(){
         localStorage.csv_text = csv_text;
         
     var regexp = /\s*"((?:[^"\\]|\\.)*)"\s*,?|\s*([^,]+),?|\s*,/g;
-    var lines = csv_text.split(/\n+\s* /);
+    var lines = csv_text.split(/\n+\s*/);
     var html_text = [];
     var commonLength = NaN;
     //underscore
@@ -57,5 +53,5 @@ function analizar(){
     html_text.push('</table>');
     $("#table_string").css("display" , "block");
     document.getElementById("tabla").innerHTML = html_text.join('\n');
-    */
+    
 };
