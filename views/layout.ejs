@@ -15,9 +15,8 @@
         $(document).ready(function(){
             $("#analizar").click(function(event){
                 event.preventDefault();
-                $.get("csv.js", null, function(data, status, xhr){
-                    console.log(data);
-                    $("#tabla").text(data);
+                $.getScript("csv.js", function(response, status){
+                    $("#tabla").text(response);
                 });
             });
         });
