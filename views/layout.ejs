@@ -15,9 +15,10 @@
         $(document).ready(function(){
             $("#analizar").click(function(event){
                 event.preventDefault();
-                $.get("csv.js", function(json){
-                    console.log(json);
-                });
+                $.get("csv.js",  {nombres: ["juan", "pedro"]}, function( data ) {
+                    $( "#tabla" ).html( data["answer"]);
+                    console.log(data);
+                }, 'json');
             });
         });
     </script>
