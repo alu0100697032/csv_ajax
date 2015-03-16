@@ -22,11 +22,6 @@ app.get('/tests', function (req, res) {
   res.render('tests', { title: 'CSV Test' });
 });
 
-app.get('csv.js', function(req, res) {
-    var isAjaxRequest = req.xhr;
-    console.log(isAjaxRequest);
-});
-
 app.listen(app.get('port'), function() {
     console.log("Node app is running at localhost:" + app.get('port'));
 });

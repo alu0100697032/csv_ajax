@@ -13,8 +13,8 @@ function analizar(){
     string.push("Array");
     string.push("toJSON");
     var json = JSON.stringify(string);
-    //console.log(json);
-    //return json;
+    console.log(json);
+    return json;
     /*var csv_text = document.getElementById("csv_text").value;
     
     //local storage 
@@ -62,4 +62,3 @@ function analizar(){
     document.getElementById("tabla").innerHTML = html_text.join('\n');
     */
 };
-analizar();
