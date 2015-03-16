@@ -1,19 +1,18 @@
 //jQuery
-$(document).ready(function() {
+/*$(document).ready(function() {
     if (window.localStorage && localStorage.csv_text) {
         $("#csv_text").val(localStorage.csv_text);
     }
     analizar();
-});
+});*/
 
 function analizar(){
     
     var string = [];
     string.push("Array");
     string.push("toJSON");
-    var json = JSON.stringify(string);
-    console.log(json);
-    return json;
+    console.log(string);
+    return string;
     /*var csv_text = document.getElementById("csv_text").value;
     
     //local storage 
@@ -60,4 +59,4 @@ function analizar(){
     $("#table_string").css("display" , "block");
     document.getElementById("tabla").innerHTML = html_text.join('\n');
     */
-};
+};analizar();

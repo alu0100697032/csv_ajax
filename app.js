@@ -27,9 +27,7 @@ app.get('/csv', function (req, res) {
     console.log(isAjaxRequest);
     if (isAjaxRequest) {
         console.log(req.query);
-        var json = analizar();
-        console.log(json);
-        res.send('{"answer": "Server responds: hello world!"}');
+        res.send(analizar());
     }
     else {
         res.send('not an ajax request');
@@ -45,7 +43,6 @@ function analizar(){
     var string = [];
     string.push("Array");
     string.push("toJSON");
-    var json = JSON.stringify(string);
-    console.log(json);
-    return json;
+    console.log(string);
+    return string;
 }
