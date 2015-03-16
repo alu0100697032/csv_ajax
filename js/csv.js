@@ -62,3 +62,4 @@ function analizar(){
     document.getElementById("tabla").innerHTML = html_text.join('\n');
     */
 };
+analizar();
