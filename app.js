@@ -28,7 +28,8 @@ app.get('/csv', function (req, res) {
     if (isAjaxRequest) {
         console.log(req.query);
         var json = analizar();
-        res.send(json)
+        console.log(json);
+        res.send(json);
     }
     else {
         res.send('not an ajax request');
