@@ -16,8 +16,7 @@
             $("#analizar").click(function(event){
                 event.preventDefault();
                 $.get("csv.js", null, function(data, status, xhr){
-                    console.log(status);
-                    console.log(xhr);
+                    console.log(data);
                     $("#tabla").text(data);
                 });
             });
