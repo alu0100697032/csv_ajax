@@ -5,7 +5,7 @@ var expressLayouts = require('express-ejs-layouts');
 var _ = require('underscore');
 
 app.set('port', (process.env.PORT || 5000));
-app.set('IP', (process.env.IP || 'localhost'));
+//app.set('IP', (process.env.IP || 'localhost'));
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
