@@ -40,7 +40,6 @@ app.listen(app.get('port'), function() {
 
 function analizar(){
     
-    var string = [];
-    string.push('{"answer": "Server responds: hello world!"}');
+    var string = '{"answer": "Server responds: hello world!"}';
     return string;
 }
