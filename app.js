@@ -27,7 +27,7 @@ app.get('/csv', function (req, res) {
     console.log(isAjaxRequest);
     if (isAjaxRequest) {
         console.log(req.query);
-        res.send(analizar());
+        res.send(req.query);
     }
     else {
         res.send('not an ajax request');
@@ -37,6 +37,7 @@ app.get('/csv', function (req, res) {
 app.listen(app.get('port'), function() {
     console.log("Node app is running at localhost:" + app.get('port'));
 });
+
 
 function analizar(){
     
