@@ -1,26 +1,21 @@
 //jQuery
-/*$(document).ready(function() {
+$(document).ready(function() {
     if (window.localStorage && localStorage.csv_text) {
         $("#csv_text").val(localStorage.csv_text);
     }
     analizar();
-});*/
+});
 
 function analizar(){
     
-    var string = [];
-    string.push("Array");
-    string.push("toJSON");
-    console.log(string);
-    return string;
-    /*var csv_text = document.getElementById("csv_text").value;
+    var csv_text = document.getElementById("csv_text").value;
     
     //local storage 
     if(window.localStorage)
         localStorage.csv_text = csv_text;
         
     var regexp = /\s*"((?:[^"\\]|\\.)*)"\s*,?|\s*([^,]+),?|\s*,/g;
-    var lines = csv_text.split(/\n+\s* /);
+    var lines = csv_text.split(/\n+\s*/);
     var html_text = [];
     var commonLength = NaN;
     //underscore
@@ -58,5 +53,4 @@ function analizar(){
     html_text.push('</table>');
     $("#table_string").css("display" , "block");
     document.getElementById("tabla").innerHTML = html_text.join('\n');
-    */
-};analizar();
+};

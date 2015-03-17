@@ -13,12 +13,19 @@
     <script type="text/javascript" src="/bootstrap.min.js"></script>
     <script>
         $(document).ready(function(){
+            //check storage data
+            if (window.localStorage && localStorage.csv_text) {
+                $("#csv_text").val(localStorage.csv_text);
+            }
             $("#analizar").click(function(event){
                 event.preventDefault();
-                $.get("/csv",  csv_text.value, function( data ) {
-                    $( "#tabla" ).html( data );
+                $.get("/csv", {csv_text: csv_text.value}, function( data ) {
+                    $( "#tabla" ).text( data.csv_text );
                     console.log(data);
                 });
+                //storage data
+                if(window.localStorage)
+                    localStorage.csv_text = $("#csv_text").val();
             });
         });
     </script>
