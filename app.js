@@ -2,7 +2,7 @@ var express = require('express');
 var app = express();
 var path = require('path');
 var expressLayouts = require('express-ejs-layouts');
-require('underscore-express')(app);
+var _ = require('underscore');
 
 app.set('port', (process.env.PORT || 5000));
 app.set('IP', (process.env.IP || 'localhost'));
@@ -25,19 +25,16 @@ app.get('/tests', function (req, res) {
 });
 
 app.get('/csv', function (req, res) {
-    var isAjaxRequest = req.xhr;
-    if (isAjaxRequest) {
-        //console.log(req.query);
-        res.send(analizar(req.query));
-    }
-    else {
-        res.send('not an ajax request');
-    }
+
+    res.send(analizar(req.query));
+
 });
 
 app.listen(app.get('port'), function() {
     console.log("Node app is running at localhost:" + app.get('port'));
 });
+
+
 
 function analizar(cadena){
     

@@ -1,19 +1,6 @@
-//jQuery
-$(document).ready(function() {
-    if (window.localStorage && localStorage.csv_text) {
-        $("#csv_text").val(localStorage.csv_text);
-    }
-    analizar();
-});
-
-function analizar(){
+function analizar(cadena){
     
-    var csv_text = document.getElementById("csv_text").value;
-    
-    //local storage 
-    if(window.localStorage)
-        localStorage.csv_text = csv_text;
-        
+    var csv_text = cadena.csv_text;
     var regexp = /\s*"((?:[^"\\]|\\.)*)"\s*,?|\s*([^,]+),?|\s*,/g;
     var lines = csv_text.split(/\n+\s*/);
     var html_text = [];
@@ -51,6 +38,5 @@ function analizar(){
     }
     html_text.unshift('<table class="table table-bordered">');
     html_text.push('</table>');
-    $("#table_string").css("display" , "block");
-    document.getElementById("tabla").innerHTML = html_text.join('\n');
+    return html_text;
 };
