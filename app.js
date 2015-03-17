@@ -27,7 +27,7 @@ app.get('/csv', function (req, res) {
     console.log(isAjaxRequest);
     if (isAjaxRequest) {
         console.log(req.query);
-        res.send(req.query);
+        res.send(req.data);
     }
     else {
         res.send('not an ajax request');
