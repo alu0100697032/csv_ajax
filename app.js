@@ -5,7 +5,6 @@ var expressLayouts = require('express-ejs-layouts');
 var _ = require('underscore');
 
 app.set('port', (process.env.PORT || 5000));
-//app.set('IP', (process.env.IP || 'localhost'));
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -41,12 +40,8 @@ function analizar(cadena){
     var csv_text = cadena.csv_text;
     var regexp = /\s*"((?:[^"\\]|\\.)*)"\s*,?|\s*([^,]+),?|\s*,/g;
     var lines = csv_text.split(/\n+\s*/);
-    var html_text = [];
+    var html_text = '';
     var commonLength = NaN;
-    //underscore
-    /*var row = "<% _.each(item, function(cell){%>"+ 
-              "<td><%=cell%></td>"+    
-              "<%}); %>";*/
     
     for (var i in lines){
         var matching = lines[i].match(regexp);
@@ -67,20 +62,16 @@ function analizar(cadena){
                 value = value.replace(/\\"/,'"'); //remove scaped quotes
                 t_row.push(value);
             }
-            //underscore
             var tr_type = error? '<tr style="background-color:red;">': '<tr>';
             var row = '';
             t_row.forEach(function(td, index){
-               row = row + td; 
+               row = row + '<td>' + td + '</td>'; 
             });
-            //console.log(row);
-            html_text.push(tr_type + row + '</tr>');
+            html_text = html_text + tr_type + row + '</tr>';
         }else{
             alert("Invalid CSV format!");
         }
     }
-    html_text.unshift('<table class="table table-bordered">');
-    html_text.push('</table>');
-    console.log(html_text);
+    html_text = '<table class="table table-bordered">' + html_text + '</table>';
     return html_text;
 };
