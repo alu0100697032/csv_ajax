@@ -21,7 +21,7 @@
                 event.preventDefault();
                 $.get("/csv", {csv_text: csv_text.value}, function(data) {
                     $("#tabla").html(data);
-                    //console.log(data);
+                    console.log(data);
                 });
                 //storage data
                 if(window.localStorage)

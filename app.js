@@ -44,9 +44,9 @@ function analizar(cadena){
     var html_text = [];
     var commonLength = NaN;
     //underscore
-    var row = "<% _.each(item, function(cell){%>"+ 
+    /*var row = "<% _.each(item, function(cell){%>"+ 
               "<td><%=cell%></td>"+    
-              "<%}); %>";
+              "<%}); %>";*/
     
     for (var i in lines){
         var matching = lines[i].match(regexp);
@@ -69,12 +69,18 @@ function analizar(cadena){
             }
             //underscore
             var tr_type = error? '<tr style="background-color:red;">': '<tr>';
-            html_text.push(tr_type + _.template(row, {item : t_row}) + '</tr>');
+            var row = '';
+            t_row.forEach(function(td, index){
+               row = row + td; 
+            });
+            //console.log(row);
+            html_text.push(tr_type + row + '</tr>');
         }else{
             alert("Invalid CSV format!");
         }
     }
     html_text.unshift('<table class="table table-bordered">');
     html_text.push('</table>');
+    console.log(html_text);
     return html_text;
 };
