@@ -25,8 +25,9 @@ module.exports = function(config) {
       'js/csv.js',
       'js/underscore-min.js',
       'tests/*.js',
-      'tests/index.html',
-      'index.html'
+      'views/tests.ejs',
+      'views/index.ejs',
+      'views/layout.ejs'
     ],
 
 
