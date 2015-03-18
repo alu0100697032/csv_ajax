@@ -31,8 +31,8 @@ Enlaces:
 
 * [Travis](https://travis-ci.org/alu0100697032/csv)
 * [Heroku](https://david-victor-csv.herokuapp.com)
-* [Repositorio GitHub](https://github.com/alu0100697032/csv)
-* [Página web del proyecto](http://alu0100697032.github.io/csv/index.html)
+* [Repositorio GitHub](https://github.com/alu0100697032/csv_ajax)
+* [Página web del proyecto](https://david-victor-csv.herokuapp.com)
 
 Recursos utilizados:
 =======
