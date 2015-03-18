@@ -1,21 +1,15 @@
 var assert = chai.assert;
 
 suite('csv', function() {
-
-    /*setup(function() {
-        if (typeof __html__ !== 'undefined') {
-            document.body.innerHTML = __html__['tests/index.html'];
-            csv_text = document.getElementById('csv_text');
-            tabla = document.getElementById('tabla');
-        }
-    });*/
+    
     suite('CSV to Table', function() {
         test('Tabla con un sólo elemento', function() {
             csv_text.value = '1elemento';
             $.get("/csv", {csv_text: csv_text.value}, function(data) {
                 $("#tabla").html(data);
-                console.log("jquery");
             });
+            console.log($("#tabla"));
+            console.log($("#tabla").contentText);
             assert.deepEqual($("#tabla").html(), '<table class="table table-bordered">\n<tbody><tr><td>1 elemento</td></tr>\n</tbody></table>')
         });
         /*test('Tabla con dos elementos', function() {
