@@ -32,7 +32,7 @@ exports.analizar = function(cadena){
             });
             html_text = html_text + tr_type + row + '</tr>';
         }else{
-            alert("Invalid CSV format!");
+            return "Invalid csv format!";
         }
     }
     html_text = '<table class="table table-bordered">' + html_text + '</table>';
