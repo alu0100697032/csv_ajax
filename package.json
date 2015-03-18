@@ -12,7 +12,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/alu0100697032/csv.git"
+    "url": "https://github.com/alu0100697032/csv_ajax.git"
   },
   "devDependencies": {
     "blanket": "^1.1.6",
@@ -40,9 +40,9 @@
   "author": "Víctor Pérez Hernández & David Rodríguez González de Chaves",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/alu0100697032/csv/issues"
+    "url": "https://github.com/alu0100697032/csv_ajax/issues"
   },
-  "homepage": "https://github.com/alu0100697032/csv",
+  "homepage": "https://github.com/alu0100697032/csv_ajax",
   "dependencies": {
     "body-parser": "^1.12.0",
     "ejs": "^2.3.1",
