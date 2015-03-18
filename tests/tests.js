@@ -2,20 +2,23 @@ var assert = chai.assert;
 
 suite('csv', function() {
 
-    setup(function() {
+    /*setup(function() {
         if (typeof __html__ !== 'undefined') {
             document.body.innerHTML = __html__['tests/index.html'];
             csv_text = document.getElementById('csv_text');
             tabla = document.getElementById('tabla');
         }
-    });
+    });*/
     suite('CSV to Table', function() {
         test('Tabla con un sólo elemento', function() {
-            csv_text.value = "1 elemento";
-            analizar();
-            assert.deepEqual(tabla.innerHTML, '<table class="table table-bordered">\n<tbody><tr><td>1 elemento</td></tr>\n</tbody></table>')
+            csv_text.value = '1elemento';
+            $.get("/csv", {csv_text: csv_text.value}, function(data) {
+                $("#tabla").html(data);
+                console.log("jquery");
+            });
+            assert.deepEqual($("#tabla").html(), '<table class="table table-bordered">\n<tbody><tr><td>1 elemento</td></tr>\n</tbody></table>')
         });
-        test('Tabla con dos elementos', function() {
+        /*test('Tabla con dos elementos', function() {
             csv_text.value = "1 elemento, 2 elementos";
             analizar();
             assert.deepEqual(tabla.innerHTML, '<table class="table table-bordered">\n<tbody><tr><td>1 elemento</td><td> 2 elementos</td></tr>\n</tbody></table>')
@@ -51,6 +54,6 @@ suite('csv', function() {
             csv_text.value = "";
             analizar();
             assert.deepEqual(undefined)
-        });
+        });*/
     });
 });

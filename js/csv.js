@@ -36,5 +36,6 @@ exports.analizar = function(cadena){
         }
     }
     html_text = '<table class="table table-bordered">' + html_text + '</table>';
+    console.log(html_text);
     return html_text;
 };
